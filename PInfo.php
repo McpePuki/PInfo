@@ -30,7 +30,7 @@ namespace PInfo;
         public function onEnable() {
           $this->getServer()->getPluginManager()->registerEvents($this, $this);
           $this->getScheduler()->scheduleRepeatingTask(new class($this) extends Task {
-            public function __construct(Info $owner) {
+            public function __construct(PInfo $owner) {
               $this->owner = $owner;
             }
             public function onRun(int $currentTick) {
